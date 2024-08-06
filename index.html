@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Form Example</title>
+</head>
+<body>
+    <div class="form-container">
+        <form action="#">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+            <label for="country">Country</label>
+            <select id="country" name="country">
+                <option value="australia">Australia</option>
+                <option value="canada">Canada</option>
+                <option value="usa">USA</option>
+            </select>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <div class="dropdown-container">
+        <label for="links">Links</label>
+        <select id="links" name="links" onchange="openLink(this.value)">
+            <option value="#">Select a link</option>
+            <option value="https://www.example1.com">Example 1</option>
+            <option value="https://www.example2.com">Example 2</option>
+            <option value="https://www.example3.com">Example 3</option>
+        </select>
+    </div>
+
+    <div class="dropdown-container">
+        <button>Dropdown</button>
+        <div class="options">
+          <p>Link 1</p>
+          <p>Link 2</p>
+          <p>Link 3</p>
+        </div>
+      </div>
+</body>
+</html>
