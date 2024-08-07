@@ -1,39 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Form</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Form </title>
+    <style>
+        body {
+            background-color: rgb(255, 255, 255);
+        }
+
+        label {
+            margin-bottom: 10px;
+        }
+
+        select {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 530px;
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            padding-left: 10px;
+        }
+
+        #country {
+            padding-left: 20px;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            width: 100%;
+        }
+
+        input[type="text"] {
+            outline: none;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            padding-left: 20px;
+            width: 500px;
+        }
+
+        button {
+            padding: 10px;
+            width: 530px;
+            border: none;
+            background-color: #4caf50;
+            color: white;
+        }
+
+        .dropdown-container {
+            background-color: white;
+            padding: 10px;
+            margin-top: 5px;
+            width: fit-content;
+        }
+
+        .dropdown-container label {
+            padding: 10px;
+            width: fit-content;
+            background-color: #4caf50;
+            color: white;
+            font-size: 17px;
+            border: none;
+        }
+
+        .options {
+            padding: 10px;
+            width: 160px;
+            background-color: gainsboro;
+            display: none;
+        }
+
+        .options a {
+            display: block;
+            margin-top: 10px;
+            text-decoration: none;
+            color: black;
+        }
+
+        .checkbox:checked~.options {
+            display: block;
+        }
+
+        .checkbox {
+            display: none;
+        }
+    </style>
 </head>
+
 <body>
-    <div class="form-container">
-        <form action="#">
-            <label for="fname">First Name</label>
-            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+    <div align="left">
+        <form style="padding: 10px; background-color: gainsboro; width: 550px" action="">
+            <label>First Name</label>
+            <input type="text" placeholder="Your name " /> <br /><br />
+            <label>last Name</label>
+            <input type="text" placeholder="Your last name  " /> <br /><br />
+            <label>Country</label>
+            <select name="" id="">
+                <option value="">Saudi Arabia</option>
+                <option value="">Ethiopia</option>
+                <option value="">Yemen</option>
+                <option value="">USA</option>
 
-            <label for="lname">Last Name</label>
-            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                <option value="">Asturalia</option>
 
-            <label for="country">Country</label>
-            <select id="country" name="country">
-                <option value="australia">Australia</option>
-                <option value="canada">Canada</option>
-                <option value="usa">USA</option>
             </select>
-
-            <input type="submit" value="Submit">
+            <button>Submit</button>
         </form>
     </div>
-
     <div class="dropdown-container">
-        <button>Dropdown</button>
+        <label for="toggle">Dropdown</label>
+        <input class="checkbox" type="checkbox" id="toggle" />
         <div class="options">
-          <p>Link 1</p>
-          <p>Link 2</p>
-          <p>Link 3</p>
+            <a href="">Link 1</a>
+            <a href="">Link 2</a>
+            <a href="">Link 3</a>
         </div>
-        <p>This is a dropdown menu</p>
-      </div>
+        <p>This is Dropdown Menu</p>
+    </div>
 </body>
+
 </html>
